@@ -1,8 +1,10 @@
 const roasts = [
-  "Your eyes are drier than leftover injera. Blink, abet!",
   "Is that code or a cry for help? Look away.",
   "Even a donkey knows when to stop. Why don't you?",
   "Your eyes just filed a formal complaint with HR.",
+  "If your code were a movie, it would be 'The NeverEnding Story'... and not in a good way.",
+  "Your code is like a black hole: it sucks in all logic and never lets it escape.",
+  "If your code were a person, it would be the reason for the invention of the 'undo' button.",
 ]
 
 export default function Roasts() {

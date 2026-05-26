@@ -49,7 +49,7 @@ export default function Hero() {
           className="font-sans text-5xl md:text-7xl font-black text-[#002147] uppercase tracking-tighter leading-[0.95]"
         >
           Your eyes are failing. <br />
-          <span className="italic text-[#7C5CFC] font-serif lowercase">ICare actually helps.</span>
+          <span className="italic text-[#667a91] font-serif lowercase">ICare actually helps.</span>
         </motion.h1>
 
         {/* More Descriptive Paragraph */}
