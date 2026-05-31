@@ -1,3 +1,4 @@
+import video from '../../public/video.mp4'
 export default function Showcase() {
   return (
     <section className="flex flex-col items-center px-6 py-24 bg-[#f8fafc]">
@@ -32,7 +33,7 @@ export default function Showcase() {
                 playsInline
                 className="w-full h-full object-cover opacity-90 mix-blend-screen"
               >
-                <source src="/watcher.mp4" type="video/mp4" />
+                <source src={video} type="video/mp4" />
               </video>
 
               {/* Crisp App Scanlines */}
@@ -40,7 +41,7 @@ export default function Showcase() {
                 className="absolute inset-0 pointer-events-none"
                 style={{
                   backgroundImage:
-                    "repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.15) 3px, rgba(0,0,0,0.15) 5px)",
+                    "",
                 }}
               />
 
