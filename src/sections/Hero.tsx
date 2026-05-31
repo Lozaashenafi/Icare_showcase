@@ -11,7 +11,6 @@ import {
   ShieldAlert, 
   Check,
   MousePointerClick,
-  FileCode
 } from "lucide-react"
 
 const containerVariants: Variants = {
@@ -45,9 +44,9 @@ const platforms = [
   },
   {
     name: "LINUX (PORTABLE)",
-    ext: ".AppImage",
+    ext: ".deb",
     icon: "🐧",
-    file: "https://github.com/Lozaashenafi/Icare_showcase/releases/download/v1.0.0/ICare-1.0.0.AppImage",
+    file: "https://github.com/Lozaashenafi/Icare_showcase/releases/download/v1.0.0/icare-vision_1.0.0_amd64.deb",
     needsGuide: true
   }
 ]
@@ -122,7 +121,7 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-     {/* --- Linux Setup Modal --- */}
+      {/* --- Linux Setup Modal --- */}
       <AnimatePresence>
         {showLinuxGuide && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-[#002147]/60 backdrop-blur-md">
@@ -144,54 +143,37 @@ export default function Hero() {
                   <ShieldAlert size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-black text-[#002147] uppercase tracking-tighter">Linux AppImage Setup</h3>
-                  <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">Run these commands in your terminal</p>
+                  <h3 className="text-xl font-black text-[#002147] uppercase tracking-tighter">Ubuntu / Debian Setup</h3>
+                  <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">Follow this to add ICare to your app list</p>
                 </div>
               </div>
 
-              <div className="space-y-4 text-left max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
+              <div className="space-y-6">
                 <Step 
                   number="01" 
-                  title="Make Executable" 
-                  icon={<FileCode size={16} />}
-                  desc="Give the file permission to run."
-                  cmd={`chmod +x ~/Downloads/ICare-1.0.0.AppImage`}
+                  title="Right-Click & Install" 
+                  icon={<MousePointerClick size={16} />}
+                  desc="Don't just double-click (it might just extract). Right-click the file and select 'Open With Software Install' or 'App Center'."
                 />
                 <Step 
                   number="02" 
-                  title="Install FUSE" 
+                  title="Terminal Method (Reliable)" 
                   icon={<Terminal size={16} />}
-                  desc="Required to open AppImages on Ubuntu 22.04+."
-                  cmd={`sudo apt update && sudo apt install libfuse2 -y`}
+                  desc="If the GUI fails, use the terminal to force a proper system installation. This ensures the icon appears in your menu."
+                  cmd={`sudo apt install ./Downloads/icare_1.0.0_amd64.deb`}
                 />
                 <Step 
                   number="03" 
-                  title="Add to App Menu" 
-                  icon={<Zap size={16} />}
-                  desc="Create a permanent shortcut so you can find ICare in your apps search."
-                  cmd={`cat <<EOF > ~/.local/share/applications/icare.desktop
-[Desktop Entry]
-Name=ICare
-Exec=$HOME/Downloads/ICare-1.0.0.AppImage --no-sandbox
-Icon=utilities-eye
-Type=Application
-Categories=Utility;
-EOF`}
-                />
-                <Step 
-                  number="04" 
                   title="Launch Surveillance" 
-                  icon={<MousePointerClick size={16} />}
-                  desc="Search for 'ICare' in your app list or run manually:"
-                  cmd={`~/Downloads/ICare-1.0.0.AppImage --no-sandbox`}
+                  desc="Search for 'ICare' in your Applications menu. Unlike your eyesight, this install should be crystal clear."
                 />
               </div>
 
               <button 
                 onClick={() => setShowLinuxGuide(false)}
-                className="mt-8 w-full bg-[#002147] text-white py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-[10px] hover:bg-black transition-all"
+                className="mt-10 w-full bg-[#002147] text-white py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-[10px] hover:bg-black transition-all"
               >
-                I'm ready to be watched
+                Got it, install the watcher
               </button>
             </motion.div>
           </div>
