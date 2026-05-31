@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Electron builds
+public/*.exe
+public/*.AppImage
+public/*.deb
