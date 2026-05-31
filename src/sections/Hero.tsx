@@ -34,23 +34,22 @@ const childVariants: Variants = {
     },
   },
 }
-
-// --- Platform Configuration ---
 const platforms = [
-  { 
-    name: "WINDOWS", 
-    ext: ".exe", 
-    icon: "🪟", 
-    file: "/ICare Setup 1.0.0.exe" 
+  {
+    name: "WINDOWS",
+    ext: ".exe",
+    icon: "🪟",
+    file: "https://github.com/Lozaashenafi/Icare_showcase/releases/download/v1.0.0/ICare%20Setup%201.0.0.exe"
   },
-  { 
-    name: "LINUX (UBUNTU)", 
-    ext: ".deb", 
-    icon: "🐧", 
-    file: "/icare_1.0.0_amd64.deb",
-    needsGuide: true 
-  },
+  {
+    name: "LINUX (UBUNTU)",
+    ext: ".deb",
+    icon: "🐧",
+    file: "https://github.com/Lozaashenafi/Icare_showcase/releases/download/v1.0.0/icare_1.0.0_amd64.deb",
+    needsGuide: true
+  }
 ]
+
 
 export default function Hero() {
   const [showLinuxGuide, setShowLinuxGuide] = useState(false)
