@@ -160,7 +160,7 @@ export default function Hero() {
                   title="Terminal Method (Reliable)" 
                   icon={<Terminal size={16} />}
                   desc="If the GUI fails, use the terminal to force a proper system installation. This ensures the icon appears in your menu."
-                  cmd={`sudo apt install ./Downloads/icare_1.0.0_amd64.deb`}
+                  cmd={`apt install ./icare-vision_1.0.0_amd64.deb`}
                 />
                 <Step 
                   number="03" 
